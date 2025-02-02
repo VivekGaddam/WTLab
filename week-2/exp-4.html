@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> css Box Model</title>
+    <style>
+        .outer{
+            background-color: antiquewhite;
+            margin: 50px;
+
+        }
+        .inner{
+            background-color: aqua;
+            border: 2px solid red;
+            padding: 30px;
+        }
+        .outerh1{
+            padding: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <h1 class="outerh1">iam inside the outer classs and outside the inner class</h1>
+        <div class="inner">
+            <h1 class="outerh1">Iam inside the inner class </h1>
+        </div>
+    </div>
+</body>
+</html>
