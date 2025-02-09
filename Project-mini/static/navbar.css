@@ -1,0 +1,11 @@
+.navbarr {
+	display: flex;
+	width: 100vw;
+
+  }
+.brand{
+	padding-left: 10px;
+}
+nav{
+	border-radius: 5px; 
+}

@@ -1,0 +1,25 @@
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    height: 100px;
+}
+.date{
+    padding-left: 70%;
+}
+form{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+input{
+    border-style: none;
+    border-bottom: 1px solid black;
+
+}
+
+td{
+    height: 50px
+}
