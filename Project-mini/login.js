@@ -8,14 +8,14 @@ function handleSubmit(event) {
     const password = document.getElementById("floatingPassword").value;
 
     if (rollnumber && password) {
-        window.location.href = "navbar.html";
+        window.location.href = "Home.html";
     } else {
         alert("Please fill in both fields!");
     }
     const user = users.find(u => u.rollnumber === rollnumber && u.password === password);
     if (user) {
         document.cookie = `username=${user.name}; path=/; max-age=86400`; 
-        window.location.href = "navbar.html";
+        window.location.href = "Home.html";
     } else {
         alert("Invalid roll number or password!");
     }
