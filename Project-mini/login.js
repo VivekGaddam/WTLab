@@ -31,7 +31,7 @@ function greetUser() {
 }
 function handleLogout() {
     document.cookie = "username=; path=/; max-age=0"; 
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 
 window.onload = greetUser;
