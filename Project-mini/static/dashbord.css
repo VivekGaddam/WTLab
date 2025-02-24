@@ -1,0 +1,152 @@
+.calendar {
+  width: max-content;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.days div {
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid #ddd;
+  width: 150px;
+  height: 150px;
+}
+
+.days div:hover {
+  background: #ddd;
+  border-radius: 5px;
+}
+
+.calendar-cell {
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid #ddd;
+  min-height: 80px;
+}
+
+.day-number {
+  display: flex;
+  justify-content: end;
+  font-size: 8px;
+}
+
+.today {
+  background: #2e82db8a;
+  color: white;
+}
+
+.contest-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background-color: rgb(201, 201, 201);
+  border-radius: 2px;
+  font-size: 12px;
+  color: #4d2929;
+  text-decoration: none;
+}
+
+.contest-link img {
+  width: 20px;
+  height: 20px;
+}
+
+.contest-list {
+  margin-top: 10px;
+}
+
+.contest-date {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #444;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.contest-card {
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.coninfo {
+  display: flex;
+}
+
+.coninfo img {
+  width: 20px;
+  height: 20px;
+}
+
+.update {
+  padding: 5px;
+}
+
+.link {
+  height: 100vh;
+  overflow: auto;
+}
+
+.update {
+  height: 125vh;
+  overflow: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .update, .calendar {
+    width: 100%;
+  }
+
+  .update {
+    order: 1;
+    height: auto;
+  }
+
+  .calendar {
+    order: 2;
+    overflow-x: auto;
+    display: block;
+  }
+}

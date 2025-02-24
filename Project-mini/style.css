@@ -1,0 +1,12 @@
+/* styles.css */
+.exam-container {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 20px;
+}
+.exam-card {
+    margin-bottom: 15px;
+}
+.passed {
+    background-color: lightgreen;
+}
