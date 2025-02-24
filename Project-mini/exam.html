@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./static/navbar.css">
+    <style>
+      /* styles.css */
+      .exam-container {
+          max-width: 800px;
+          margin: auto;
+          padding-top: 20px;
+      }
+      .exam-card {
+          margin-bottom: 15px;
+      }
+      .passed {
+          background-color: lightgreen;
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="border-radius: 10px;">
+        <div class="container-fluid navbarr">
+          <div class="navbar-brand brand">CBITEDGE</div>
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link" style="color: black;" href="Home.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: black;" href="CIE.html">CIE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " style="color: black;" href="assigment.html">Assignment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" style="color: black;" href="exam.html">Exams</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: black;" href="contest.html">Contest</a>
+            </li>
+            <button onclick="handleLogout()" type="button" class="btn btn-dark">Logout</button>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="container exam-container">
+        <h2 class="text-center">Exam Portal</h2>
+        
+        <div class="d-flex justify-content-between mb-3">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#examModal">Create Exam</button>
+            <button class="btn btn-outline-primary" onclick="openGoogleForm()">Google Form Exam Link</button>
+        </div>
+
+        <h4>Upcoming Exams</h4>
+        <div id="upcoming-exams" class="mb-4"></div>
+        
+        <h4>Previous Exams</h4>
+        <div id="previous-exams"></div>
+    </div>
+
+    <!-- Create Exam Modal -->
+    <div class="modal fade" id="examModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create Exam</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="step1">
+                        <label>Type of Exam:</label>
+                        <input type="text" id="examType" class="form-control">
+                        <label>Number of Questions:</label>
+                        <input type="number" id="numQuestions" class="form-control">
+                        <label>Topic:</label>
+                        <input type="text" id="topic" class="form-control">
+                        <label>Maximum Points:</label>
+                        <input type="number" id="maxPoints" class="form-control">
+                        <label>Exam Title:</label>
+                        <input type="text" id="examTitle" class="form-control">
+                        <button class="btn btn-primary mt-3" onclick="nextStep()">Next</button>
+                    </div>
+                    
+                    <div id="step2" style="display: none;">
+                        <h5>Questions</h5>
+                        <div id="questions"></div>
+                        <button class="btn btn-secondary" onclick="addQuestion()">Add Question</button>
+                        <button class="btn btn-success mt-3" onclick="saveExam()">Save Exam</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Attempt Exam Modal -->
+    <div class="modal fade" id="attemptExamModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Attempt Exam</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="exam-content"></div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" onclick="submitExam()">Submit Exam</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    function openGoogleForm() {
+        window.open("https://forms.google.com", "_blank"); // Replace with actual Google Form link
+    }
+</script>
+
+<script src="./login.js"></script>
+<script src="./exam.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

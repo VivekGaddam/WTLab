@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Click Events</title>
+</head>
+<body>
+    <h1>Event Handling Demo</h1>
+    <button onclick="showAlert()">Click here for Alert</button>
+    <button onmouseover ="Hovereffect(this)" onmouseout="changeeffect(this)">Hover here!</button>
+    <input type="text" placeholder="Focus here" class="input1" onfocus="Focuseffect()">
+    <input type="text" name="" id="input2" placeholder="Type Some Thing" onkeydown="KeyPressed(event)">
+    <p id="message">Interact with the html to see the change</p>
+
+
+</body>
+<script>
+    function showAlert(){
+        alert("this is Alert")
+    }
+    function Hovereffect(element){
+        element.textContent="Hovered!"
+    }
+    function changeeffect(element){
+        element.textContent="Hover here!"
+    }
+    function Focuseffect(){
+        document.querySelector("#message").innerHTML="input Focused"
+    }
+    function KeyPressed(element){
+        document.querySelector("#message").innerHTML="Key Pressed"+element.key
+    }
+</script>
+</html>

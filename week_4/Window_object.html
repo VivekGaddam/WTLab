@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object Methods Demo</title>
+</head>
+<body>
+    <button onclick="ShowAlert()">Alert</button>
+    <button onclick="ShowConfirm()">confirm</button>
+    <button onclick="ShowPrompt()">Prompt</button>
+    <button onclick="openNewWindow()">openNewWindow</button>
+    <button onclick="closeNewWindow()">closeNewWindow</button>
+    <button onclick="startTimeout()">startTimeout</button>
+</body>
+<script>
+
+    function ShowAlert(){
+        alert("This is the Alert")
+    }
+    function ShowConfirm(){
+        let output=confirm("Click Yes to Confirm else No")
+        console.log(output)
+    }
+    function ShowPrompt(){
+        let name=prompt("type your Name","Ram")
+        console.log(name)
+    }
+    function openNewWindow(){
+        var new_window=window.open("https://www.google.com/","_blank","width=600 hight=600")
+    }
+    function closeNewWindow(){
+        if (new_window){
+            window.close()
+        }
+        else{
+            console.log("No window to close")
+        }
+    }
+    function startTimeout(){
+        setInterval(function(){
+            alert("delay by 3000")
+
+        },3000)
+    }
+</script>
+</html>

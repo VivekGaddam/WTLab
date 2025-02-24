@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submition</title>
+</head>
+<body>
+    <form action="" onsubmit="Submitted(event)">
+        <label for="email">email</label>
+        <input type="email" name="email" id="email">
+        <label for="password">password</label>
+        <input type="password" name="password" id="password">
+        <input type="submit" name="" id="">
+    </form>
+</body>
+<script>
+   function Submitted(event){
+
+    event.preventDefault()
+    email=document.querySelector("#email").textContent
+    password=document.querySelector("#password").textContent
+    console.log(email)
+    if (email){
+        console.log(email)
+    }
+    else{
+        alert("Email is required")
+    }
+
+    if (password){
+        console.log(password.lenght)
+        if (password.lenght>=8){
+            alert("password is valid")
+        }
+        else{
+            alert("password is invalid")
+        }
+    }
+    else{
+        alert("password is required")
+    }
+    
+   }
+</script>
+</html>

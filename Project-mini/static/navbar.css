@@ -1,3 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    margin: 0;
+  }
 .navbarr {
 	display: flex;
 	width: 100vw;

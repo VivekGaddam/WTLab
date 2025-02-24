@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount</title>
+</head>
+<body>
+    <h1>Product</h1>
+    <h3>Price: <span class="price">2000</span></h3>
+    <p class="para"></p>
+    <button onclick="applydiscount()">
+        Apply
+    </button>
+
+</body>
+<script>
+    function applydiscount(){
+        document.querySelector(".price").innerHTML=1250;
+        document.querySelector(".para").innerHTML="Discount added"
+        document.querySelector(".para").style.color="green"
+    }
+</script>
+</html>

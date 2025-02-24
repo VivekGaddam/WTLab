@@ -1,0 +1,54 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Time </title>
+    <script>
+        function showDateTime(){
+            let now=new Date()
+            let date=now.toDateString()
+            let Time=now.toLocaleTimeString()
+            document.querySelector("#datee").innerHTML="date:"+date+"time :"+Time
+            UpdateDateTime(date,Time)
+        }
+        function UpdateDateTime(date,Time){
+            document.querySelector("#clock").innerHTML="date:"+date+"time :"+Time
+        }
+    </script>
+</head>
+<body onload="showDateTime()">
+    <h2>Date and Time Demonstration</h2>
+    <p id="dateTime"></p>
+    <h3>Live Clock:</h3>
+    <p id="clock"></p>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Time </title>
+    <script>
+        function ShowDateTime(){
+            let now = new Date();
+            let date = now.toDateString();
+            let Time = now.toLocaleTimeString();
+            document.querySelector("#dateTime").innerHTML = "date: " + date + " time: " + Time;
+            UpdateDateTime(date, Time);
+        }
+
+        function UpdateDateTime(date, Time){
+            document.querySelector("#clock").innerHTML = "date: " + date + " time: " + Time;
+        }
+    </script>
+</head>
+<body onload="ShowDateTime()">
+    <h2>Date and Time Demonstration</h2>
+    <p id="dateTime"></p>
+    <h3>Live Clock:</h3>
+    <p id="clock"></p>
+</body>
+</html>
