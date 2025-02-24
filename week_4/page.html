@@ -1,0 +1,48 @@
+<!-- <!DOCTYPE html>
+<html lang="en" onload="pageOnLoad()" onunload="pageunLoad()">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Load</title>
+    <script>
+        function pageOnLoad(){
+            console.log("page loaded ")
+            alert("Loaded")
+        }
+        function pageunLoad(){
+            console.log("pageunloaded")
+            alert("pageunloaded")
+        }
+    </script>
+</head>
+<body>
+    <p>page loaded unloaded</p>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" onload="pageLoaded()" onunload="pageUnloaded()">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnLoad and Unload Events Demo</title>
+    <script>
+        console.log("inscript")
+        function pageLoaded() {
+            console.log("called")
+            alert("Page has loaded successfully!");
+        }
+        function pageUnloaded() {
+            alert("Page is unloading. Goodbye!");
+        }
+    </script>
+</head>
+
+<body>
+    <h2>OnLoad and Unload Events Demonstration</h2>
+    <p>Open this page to see the onLoad event in action. Close or reload to
+        trigger the unload event.</p>
+</body>
+
+</html>
